@@ -35,7 +35,15 @@ const App = () => {
 
       <Form onCalculate={calculateHandler} />
 
-      {!userInput && <p>No Investment Data.</p>}
+      {!userInput && (
+        <p
+          style={{
+            textAlign: "center",
+          }}
+        >
+          No Investment Data.
+        </p>
+      )}
       {userInput && (
         <Table
           data={yearlyData}

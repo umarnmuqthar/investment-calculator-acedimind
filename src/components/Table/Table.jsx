@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./Table.module.css";
 
 const formatter = new Intl.NumberFormat("en-IN", {
   style: "currency",
@@ -9,7 +10,7 @@ const formatter = new Intl.NumberFormat("en-IN", {
 
 const Table = (props) => {
   return (
-    <table className="result">
+    <table className={classes.result}>
       <thead>
         <tr>
           <th>Year</th>
@@ -36,7 +37,7 @@ const Table = (props) => {
               {formatter.format(
                 props.initialInvestment +
                   yearlyData.yearlyContribution * yearlyData.year
-              ) }
+              )}
             </td>
           </tr>
         ))}
