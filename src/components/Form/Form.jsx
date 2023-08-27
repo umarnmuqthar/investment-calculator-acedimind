@@ -24,7 +24,7 @@ const Form = (props) => {
     setUserInput((prevState) => {
       return {
         ...prevState,
-        [input]: value,
+        [input]: +value,
       };
     });
   };
